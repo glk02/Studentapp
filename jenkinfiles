@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('git-clone') {
             steps {
-               git changelog: false, credentialsId: 'git', poll: false, url: 'https://github.com/glk02/Studentapp.git'
+               git credentialsId: 'git', url: 'https://github.com/glk02/Studentapp.git'
             }	
 		}	
         stage('mvn-clean') {
